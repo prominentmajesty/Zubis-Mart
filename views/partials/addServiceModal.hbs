@@ -1,0 +1,42 @@
+<div id="addServiceModal" class="modal">
+    <div id="addServiceLoader" class="progress">
+        <div class="indeterminate"></div>
+    </div>
+    <div class="modal-content">
+        <h4>Add Service for Sale</h4>
+        <form id="addServiceForm" name="addServiceForm">
+            <div class="row login-row">
+                <div class="col s12 input-field">
+                    <select name="seviceCategory" id="seviceCategory">
+                        <option value="" disabled selected>Choose a category</option>
+                        <option value="Accommodation">Accommodation</option>
+                        <option value="Catering">Catering</option>
+                        <option value="Furniture">Furniture</option>
+                        <option value="Hair Styling">Hair Styling</option>
+                        <option value="Home & Interior Decor">Home &amp; Interior Decor</option>
+                        <option value="Laundry">Laundry</option>
+                        <option value="Make up">Make up</option>
+                        <option value="Photography">Photography</option>
+                        <option value="Ushering">Ushering</option>
+                        <option value="Gardening">Gardening</option>
+                        <option value="MC & DJ">MC &amp; DJ</option>
+                        <option value="Phone & Laptop Repairs">Phone &amp; Laptop Repairs</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row login-row">
+                <div class="col s12 input-field">
+                    <textarea name="serviceDescription" id="serviceDescription" class="materialize-textarea" class="validate" maxlength="160"></textarea>
+                    <label for="serviceDescription">Short description here...</label>
+                    <span class="helper-text" data-error="Invalid Description!">Characters <span id="serviceDescriptionCharacters">0</span>/160</span>
+                </div>
+            </div>
+            <div class="row login-row">
+                <div class="col s12 input-field">
+                    <button id="addServiceButton" class="button btn waves-effect waves-light" type="submit">Add Service</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

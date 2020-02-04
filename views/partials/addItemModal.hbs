@@ -1,0 +1,58 @@
+<div id="addItemModal" class="modal">
+    <div id="addItemLoader" class="progress">
+        <div class="indeterminate"></div>
+    </div>
+    <div class="modal-content">
+        <h4>Add Item for Sale<i id="modal-close" class="mdi mdi-close modal-close right"></i></h4>
+        <form id="addItemForm" name="addItemForm" enctype="multipart/form-data" method="POST" action="/users/{{user._id}}/upload">
+            <div class="row login-row">
+                <div class="col l6 s12 input-field">
+                    <input type="text" name="itemName" id="itemName" class="validate" autofocus>
+                    <label for="itemName">Item Name</label>
+                    <span class="helper-text" data-error="Please provide item name"></span>
+                </div>
+                <div class="col l6 s12 input-field">
+                    <input type="number" name="itemPrice" id="itemPrice" class="validate">
+                    <label for="itemPrice">Item Price</label>
+                    <span class="helper-text" data-error="Please provide item price."></span>
+                </div>
+            </div>
+            <div class="row login-row">
+                <div class="col s12 input-field">
+                    <select name="itemCategory" id="itemCategory">
+                        <option value="" disabled selected>Choose a category</option>
+                        <option value="Phones & Electronics">Phones &amp; Electronics</option>
+                        <option value="Cosmetics">Cosmetics</option>
+                        <option value="Books">Books</option>
+                        <option value="Fashion">Fashion</option>
+                        <option value="Home & Furniture">Home &amp; Furniture</option>
+                        <option value="Vehicles">Vehicles</option>
+                        <option value="Others">Others</option>
+                    </select>
+                    <span class="helper-text" data-error="Please select an item category."></span>
+                </div>
+            </div>
+            <div class="row login-row">
+                <div class="col s12 input-field">
+                    <textarea name="itemDescription" id="itemDescription" class="materialize-textarea" class="validate" maxlength="100"></textarea>
+                    <label for="itemDescription">Short description here...</label>
+                    <span class="helper-text" data-error="Please enter a description for your item">Characters <span id="itemDescriptionCharacters">0</span>/100</span>
+                </div>
+            </div>
+            <div class="row login-row">
+                <div class="file-field input-field">
+                    <div id="addImageButton" class="btn"><span>Add Image</span><input type="file" accept=".jpg" name="itemImage"></div>
+                    <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text" name="fileField" placeholder="Add Image">
+                        <span class="helper-text" data-error="Please choose an image to upload."></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row login-row">
+                <div class="col s12 input-field">
+                    <button id="addItemButton" class="button btn waves-effect waves-light" type="submit">Add Item</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

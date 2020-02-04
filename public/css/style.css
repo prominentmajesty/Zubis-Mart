@@ -1,0 +1,403 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #efefef !important;
+}
+
+.messages {
+    padding: 10px 0;
+    margin: 0px !important;
+}
+
+#failureText {
+    color: #d32f2f;
+    background-color: rgba(244, 67, 54, .30);
+}
+
+#successText {
+    color: #388e3c;
+    background-color: #a5d6a7;
+}
+
+.successClose:hover {
+    color: #ff0000;
+    cursor: pointer;
+}
+
+.failureClose:hover {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+#logo {
+    max-width: 155px !important;
+    max-height: 300px !important;
+    /* position: relative;
+    top: 3px; */
+}
+
+nav {
+    background-color: #a7b018;
+    /* box-shadow: none; */
+}
+
+nav .nav-wrapper {
+    padding: 0 40px;
+}
+
+nav ul a {
+    font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.dropdown-content {
+    width: auto !important;
+    background-color: #a7b018;
+}
+
+.dropdown-content li > a, .dropdown-content li > span {
+    color: #fff;
+}
+
+.dropdown-content li > a:hover, .dropdown-content li > span:hover {
+    background-color: #969e16;
+}
+
+.login-row {
+    margin-bottom: 0 !important;
+}
+
+.modal .progress {
+    top: -7px;
+}
+
+form .progress {
+    top: -13px;
+}
+
+.progress {
+    background-color: rgba(150, 158, 22, .50);
+    visibility: hidden;
+}
+
+.progress .indeterminate {
+    background-color: #969e16;
+}
+
+#loginModal {
+    border-radius: 10px;
+}
+
+.modal h4, #loginFormHeader {
+    border-bottom: 1px solid #e4e4e4;
+    padding-bottom: 10px;
+    font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    color: #666;
+}
+
+#modal-close:hover {
+    color: #fa9609;
+}
+
+.input-field .prefix {
+    color: #c5c5c5;
+}
+
+.input-field .prefix.active {
+    color: #969e16;
+}
+
+.input-field label {
+    color: #c5c5c5;
+    font-family: 'Rajdhani' ,-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.input-field input:focus + label, .input-field textarea:focus + label {
+    color: #969e16 !important;
+}
+.input-field input:focus, .input-field textarea:focus {
+    border-bottom: 1px solid #969e16 !important;
+    box-shadow: 0 1px 0 0 #969e16 !important;
+}
+
+.input-field input.valid, .input-field textarea.valid {
+    border-bottom: 1px solid #969e16 !important;
+    box-shadow: 0 1px 0 0 #969e16 !important;
+}
+
+.input-field input.invalid, .input-field textarea.invalid {
+    border-bottom: 1px solid #f44336 !important;
+    box-shadow: 0 1px 0 0 #f44336 !important;
+}
+
+#emailErrorMessage, .loginFormErrorMessage {
+    color: #f44336;
+    font-size: 12px;
+    margin-left: 3rem;
+    min-height: 18px;
+}
+
+.password-error-message {
+    /* color: rgba(204, 75, 55, 0.8); */
+    color: #fff;
+    background-color: rgba(204, 75, 55);
+}
+
+.btn {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#login-button, button, #signupButton, #addItemButton, #addServiceButton, #changePasswordButton {
+    background-color: transparent;
+    border: 1px solid #a7b018;
+    color: #a7b018;
+    width: 100%;
+    box-shadow: none;
+}
+
+#removeAccountButton {
+    background-color: transparent;
+    border: 1px solid #d32f2f;
+    color: #d32f2f;
+    width: 100%;
+    box-shadow: none;
+}
+
+#removeAccountButton:hover {
+    background-color: #d32f2f;
+    border: none;
+    color: #fff;
+    box-shadow: 2px 2px 3px #c5c5c5;
+}
+
+#login-button:hover, #signupButton:hover, #addItemButton:hover, #addServiceButton:hover, #changePasswordButton:hover {
+    background-color: #969e16;
+    border: none;
+    color: #fff;
+    box-shadow: 2px 2px 3px #c5c5c5;
+}
+
+#addImageButton {
+    background-color: #a7b018;
+    box-shadow: none;
+    color: #fff;
+    width: auto;
+}
+
+#addImageButton:hover {
+    background-color: #969e16;
+}
+
+#login {
+    background-color: #fa9609;
+    width: 100%;
+}
+
+#login:hover {
+    background-color: #e28400;;
+}
+
+.modal .modal-footer {
+    color: #444;
+    text-align: center;
+    z-index: 2;
+}
+
+#signup-link:active {
+    color: #f00 !important;
+}
+
+#signup-link:hover {
+    color: #fa9609;
+}
+
+#signup-form-container {
+    display: none; 
+}
+
+#logoContainer {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#signupFormLogo {
+    max-width: 200px;
+    max-height: 80px;
+    cursor: pointer;
+}
+
+#signupForm {
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #c5c5c5;
+    margin: 35px auto 0 auto;
+    padding: 5px 0 0 0;
+    width: 50%;
+}
+
+#signupFormFooter {
+    background-color: #efefef;
+    margin: 0;
+    padding-bottom: 30px;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+
+#signupFormFooterRow {
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.sidenav {
+    background: linear-gradient(to bottom, #a7b018, #92d14f);
+    width: 250px;
+}
+
+.sidenav li > a, .sidenav li > a > .mdi {
+    color: #fff;
+    font-family: 'Rajdhani', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.slider .indicators .indicator-item.active {
+    background-color: #fa9609;
+}
+
+#top-arrow {
+    background-color: #a7b018;
+}
+
+#top-arrow:hover {
+    background-color: #959e00;
+    color: #fa9609;
+}
+
+.page-footer .col h5 {
+    font-size: 1.5rem;
+}
+
+.footer-link-list li {
+    color: #a2a2a2;
+    font-size: 1rem;
+    font-weight: lighter;
+    list-style-type: disc !important;
+    list-style-position: inside !important;
+    text-align: left;
+}
+
+.footer-link-list li a {
+    color: #a2a2a2;
+}
+
+.footer-link-list li a:hover {
+    text-decoration: underline;
+}
+.footer-link-list li a:visited {
+    color: #a2a2a2;
+}
+
+.row {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    font-family: -apple-system, 'Roboto' BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #3d383e;
+}
+
+#footerLink li{
+    display: inline-block;
+}
+
+.footerLinks {
+    margin-left: 30px;
+    font-size: 30px;
+}
+
+.footerLinks a {
+    color: #a2a2a2;
+    text-align: center;
+}
+
+.footerLinks a:hover {
+    color: #fff;
+}
+
+.footer-copyright {
+    border-top: 1px solid #a2a2a2;
+}
+
+.footer-copyright #left, .footer-copyright #right {
+    float: left;
+    font-weight: lighter;
+    text-align: center;
+    width: 50%;
+}
+
+.footer-copyright #right h5 {
+    display: none;
+}
+
+
+@media (max-width: 768px) {
+    .advert-header {
+        border: 2px solid #e1e1e1 !important;
+    }
+    
+    .card-item {
+        flex-basis: 100% !important;
+    }
+
+    #signupForm {
+        border-radius: 5px;
+        width: 85%;
+    }
+    .sell-header {
+        font-size: 2.5rem;
+    }
+
+    nav .nav-wrapper {
+        padding: 0;
+    }
+
+    #discount {
+        padding-bottom: 0;
+    }
+
+    #left-section {
+        height: auto !important;
+    }
+
+    #loginModal {
+        height: 100%;
+    }
+
+    .modal .modal-content {
+        padding: 5px 14px 0 14px !important;
+    }
+
+    .editModalButton {
+        margin-bottom: 20px;
+    }
+
+    .page-footer, .page-footer .footer-link-list li {
+        text-align: center;
+        list-style-type: none !important;
+    }
+
+    .footer-copyright {
+        border: none;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+    }
+
+    .footer-copyright #left, .footer-copyright #right {
+        width: 100%;
+    }
+    
+    .footer-copyright #right h5 {
+        display: block;
+    }
+}

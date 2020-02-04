@@ -1,0 +1,126 @@
+{{> header}}
+<main>
+    <section id="main-section">
+        <div class="slider">
+            <ul class="slides">
+                <li>
+                    <img class="slides" src="/img/slide1.jpg" alt="Slide 1">
+                    <div class="caption center-align">
+                        <h3 id="slide1-header">Welcome to Zubis Mart</h3>
+                        <h5 class="section light" style="color: rgba(0, 0, 0, .8); background-color: rgba(255, 255, 255, 0.5);"><em>We give you the best service you deserve</em></h5>
+                    </div>
+                </li>
+                <li>
+                    <img class="slides" src="/img/slide2.jpg" alt="Slide 2">
+                    <div class="caption center-align">
+                        <h3 id="slide2-header" class="section light">Your convenience is our concern.</h3>
+                    </div>
+                </li>
+                <li>
+                    <img class="slides" src="/img/slide3.jpg" alt="Slide 3">
+                    <div class="caption">
+                        <h3 id="slide3-header">Get the most <br>affordable prices you can find</h3>
+                    </div>
+                </li>
+                <li>
+                    <img class="slides" src="/img/slide4.jpg" alt="Slide 4">
+                    <div class="caption center-align">
+                        <h3 id="slide4-header">Improve your shopping experience</h3>
+                        <h5 id="slide4-subtitle"class="section light">We offer the best!</h5>
+                    </div>
+                </li>
+                <li>
+                    <img class="slides" src="/img/slide5.jpg" alt="Slide 5">
+                    <div class="caption center-align">
+                        {{!-- <h3>From the best designer wears, to the best artistes and home keepers, we provide </h3> --}}
+                        <a class="btn waves-effect waves-light view-more" href="/products/fashion">More Wears</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div id="advert" class="container row">
+            <div class="col s12 l4 m6 advert-header">
+                <h5>Electronics</h5>
+                <a href="/products/phonesAndElectronics">View All</a>
+                <div id="advert-item-1" class="advert-item"></div>
+            </div>
+            <div class="col s12 l4 m6 advert-header">
+                <h5>Books</h5>
+                <a href="/products/books">View All</a>
+                <div id="advert-item-2" class="advert-item"></div>
+            </div>
+            <div class="col s12 l4 m6 advert-header">
+                <h5>Clothing</h5>
+                <a href="/products/fashion">View All</a>
+                <div id="advert-item-3" class="advert-item"></div>
+            </div>
+        </div>
+        <div>
+            <h5 class="sub-header">Featured Products</h5>
+            {{#if returnedProducts}}
+                <div class="row">
+                    {{#each returnedProducts}}
+                        <div class="col s12 m6 l3">
+                            <div class="card medium hoverable">
+                                <div class="card-image">
+                                    <img src="data:image/jpeg;charset=utf-8;base64,{{base64ArrayBuffer this.image.data.buffer}}" alt="{{this.name}}" class="materialboxed" data-caption="{{this.name}}">
+                                    <span class="card-title">{{this.name}}</span>
+                                </div>
+                                <div class="card-content">
+                                    <p class="price"><span class="mdi mdi-currency-ngn">{{this.price}}</span></p>
+                                </div>
+                                <div class="card-action product">
+                                    <p>Seller: <span class="product-info">{{this.userName}}</span></p>
+                                    <p>Contact: <span class="product-info">{{this.phone}}</span></p>
+                                    <p>Description: <span class="product-info">{{this.description}}</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    {{/each}}  
+                </div>
+            {{else}}
+                <h3 id="no-items">There are no Items for Sale.</h3>
+            {{/if}}
+        </div>
+        <div id="parallax1">
+            <div class="parallax-overlay">
+                <div class="parallax-text">
+                    <h5>OUR PHILOSOPHY</h5>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sequi fuga harum at aspernatur amet, veritatis sed odit recusandae rerum cumque?</p>
+                </div>
+            </div>
+        </div>
+        <div id="discount">
+            <div class="advert-header">
+                Launch Day <span style="font-weight: bold; color: #2193b0;">Discount</span>
+            </div>
+            <div id="advert-content">
+                <div class="row">
+                    <div class="col s12 m8 l8">
+                        <h3><span>Exclusive</span> Launch Day Discount</h3>
+                        <p>up to <span>45<span>%</span></span> OFF!</p>
+                        <p>for the first <span>20</span> Subscribers</p>
+                    </div>
+                    <div class="col s12 m4 l4">
+                        <button class="btn waves-effect waves-light modal-trigger" data-target="loginModal">Register Now!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{!-- <div class="scrollspy" id="about">
+            <h5 class="sub-header">About Zubis Mart</h5>
+            <p>
+                Zubis mart is an online shopping avenue for every product and services you can think of and ever need. It covers products ranging from clothing and electronics, to make up, programming services and lots more. The best thing about Zubis mart is that it not only gives you the opportunity to buy, it also gives you the opportunity to sell and make your own money; it’s a market after all.
+            </p>
+        </div> --}}
+        <div id="parallax2">
+            <div class="parallax-overlay">
+                <div class="parallax-text">
+                    <h5 class="header col s12 light parallax-header">Your favourite collection of wears in several different colours and sizes.</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    {{> fab}}
+</main>
+{{> footer}}

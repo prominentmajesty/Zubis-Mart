@@ -1,0 +1,108 @@
+<header id="page-top">
+    <div id="navbar" class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="/" class="brand-logo"><img id="logo" src="/img/logo.jpg" alt="Zubis Mart Logo"></a>
+                <a href="#" class="sidenav-trigger" data-target="mobile-menu"><i id="menu-icon" class="mdi mdi-menu"></i></a>
+                <ul id="store-dropdown" class="dropdown-content">
+                    <li><a href="/products/phonesAndElectronics">Phones &amp; Electronics</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/products/cosmetics">Cosmetics</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/products/books">Books</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/products/fashion">Fashion</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/products/homeAndFurniture">Home &amp; Furniture</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/products/vehicles">Vehicles</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/products/others">Others</a></li>
+                </ul>
+                <ul id="services-dropdown" class="dropdown-content">
+                    <li><a href="/services/accommodation">Accommodation</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/services/catering">Catering</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/services/furniture">Furniture</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/services/hairStyling">Hair Styling</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/services/homeAndDecor">Home &amp; Interior Decor</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/services/laundry">Laundry</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/services/makeUp">Make up</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/services/photography">Photography</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/services/ushering">Ushering</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/services/gardening">Gardening</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/services/mc">MC &amp; DJ</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/services/phoneAndLaptopRepairs">Phone &amp; Laptop Repairs</a></li>
+                    <li class="divider"></li>
+                    <li><a href="/services/others">Others</a></li>
+                </ul>
+                <ul id="mobile-store-dropdown" class="dropdown-content">
+                    <li><a href="/products/phonesAndElectronics">Phones &amp; Electronics</a></li>
+                    <li><a href="/products/cosmetics">Cosmetics</a></li>
+                    <li><a href="/products/books">Books</a></li>
+                    <li><a href="/products/fashion">Fashion</a></li>
+                    <li><a href="/products/homeAndFurniture">Home &amp; Furniture</a></li>
+                    <li><a href="/products/vehicles">Vehicles</a></li>
+                    <li><a href="/products/others">Others</a></li>
+                </ul>
+                <ul id="mobile-services-dropdown" class="dropdown-content">
+                    <li><a href="/services/accommodation">Accommodation</a></li>
+                    <li><a href="/services/catering">Catering</a></li>
+                    <li><a href="/services/furniture">Furniture</a></li>
+                    <li><a href="/services/hairStyling">Hair Styling</a></li>
+                    <li><a href="/services/homeAndDecor">Home &amp; Interior Decor</a></li>
+                    <li><a href="/services/laundry">Laundry</a></li>
+                    <li><a href="/services/makeUp">Make up</a></li>
+                    <li><a href="/services/photography">Photography</a></li>
+                    <li><a href="/services/ushering">Ushering</a></li>
+                    <li><a href="/services/gardening">Gardening</a></li>
+                    <li><a href="/services/mc">MC &amp; DJ</a></li>
+                    <li><a href="/services/phoneAndLaptopRepairs">Phone &amp; Laptop Repairs</a></li>
+                    <li><a href="/services/others">Others</a></li>
+                </ul>
+                <ul class="hide-on-med-and-down right">
+                    {{#if user}}
+                        <li class="active"><a href="/users/{{user._id}}"><i class="mdi mdi-home left"></i>Home</a></li>
+                        <li class="store"><a href="#!" class="dropdown-trigger" data-target="store-dropdown"><i class="mdi mdi-shopping left"></i>Store</a></li>
+                        <li class="services"><a href="#!" class="dropdown-trigger" data-target="services-dropdown"><i class="mdi mdi-truck-fast left"></i>Services</a></li>
+                        <li class="account"><a href="/users/{{user._id}}/account"><i class="mdi mdi-account left"></i>My Account</a></li>
+                        <li><a href="/users/logout/{{user._id}}"><i class="mdi mdi-logout left"></i>Log out</a></li>
+                    {{else}}
+                        <li class="active"><a href="/"><i class="mdi mdi-home left"></i>Home</a></li>
+                        <li class="store"><a href="#!" class="dropdown-trigger" data-target="store-dropdown"><i class="mdi mdi-shopping left"></i>Store</a></li>
+                        <li class="services"><a href="#!" class="dropdown-trigger" data-target="services-dropdown"><i class="mdi mdi-truck-fast left"></i>Services</a></li>
+                        <li class="sell"><a href="/sell"><i class="mdi mdi-tag left"></i>Sell on Z-Mart</a></li>
+                        <li><a href="#loginModal" class="modal-trigger"><i class="mdi mdi-login left"></i>Login/Signup</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </nav>
+        <ul id="mobile-menu" class="sidenav">
+            {{#if user}}
+                <li class="active"><a href="/users/{{user._id}}"><i class="mdi mdi-home left"></i>Home</a></li>
+                <li class="store"><a href="#!" class="dropdown-trigger" data-target="mobile-store-dropdown"><i class="mdi mdi-shopping left"></i>Store</a></li>
+                <li class="services"><a href="#!" class="dropdown-trigger" data-target="mobile-services-dropdown"><i class="mdi mdi-truck-fast left"></i>Services</a></li>
+                <li class="account"><a href="/users/{{user._id}}/account"><i class="mdi mdi-account left"></i>My Account</a></li>
+                <li><a href="/users/logout/{{user._id}}"><i class="mdi mdi-logout left"></i>Log out</a></li>
+            {{else}}
+                <li class="active"><a href="/"><i class="mdi mdi-home left"></i>Home</a></li>
+                <li class="store"><a href="#!" class="dropdown-trigger" data-target="mobile-store-dropdown"><i class="mdi mdi-shopping left"></i>Store</a></li>
+                <li class="services"><a href="#!" class="dropdown-trigger" data-target="mobile-services-dropdown"><i class="mdi mdi-truck-fast left"></i>Services</a></li>
+                <li class="sell"><a href="/sell"><i class="mdi mdi-tag left"></i>Sell on Z-Mart</a></li>
+                <li><a href="#loginModal" class="modal-trigger"><i class="mdi mdi-login left"></i>Login/Signup</a></li>
+            {{/if}}            
+        </ul>
+    </div>
+    {{> loginModal}}
+    {{> signupForm}}
+</header>
